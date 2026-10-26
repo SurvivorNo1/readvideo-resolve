@@ -102,7 +102,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const payload = await resolveVideo(video);
+    const language = typeof body?.language === "string" ? body.language : "auto";
+    const payload = await resolveVideo(video, { language });
     res.status(200).json(payload);
   } catch (e) {
     const status = e instanceof ResolveError ? e.status : 502;
