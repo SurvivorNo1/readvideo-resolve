@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "readvideo 的 Bilibili 轻量解析服务（Vercel Serverless）"
+  "description": "readvideo 的轻量视频解析服务（Vercel Serverless）",
+  "dependencies": {
+    "bgutils-js": "^4.0.3",
+    "jsdom": "^29.1.1"
+  }
 }
